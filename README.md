@@ -4,7 +4,7 @@ A mobile-friendly, single-page vehicle listing built with React and Vinext. The 
 
 ## Add the real vehicle information
 
-Edit `lib/vehicle.ts`. All listing content—including price, mileage, location, description, maintenance, specifications, sale notes, contact link, and photo captions—lives in that one file.
+Edit `lib/vehicle.ts`. All listing content—including price, mileage, location, description, family-focused highlights, specifications, sale notes, contact link, and photo captions—lives in that one file. The VIN is intentionally not stored anywhere in this project.
 
 For the contact button, replace the placeholder email in `contactHref`. You can use:
 

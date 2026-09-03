@@ -9,17 +9,17 @@ const socialImage = siteUrl ? new URL('/og.png', siteUrl).toString() : undefined
 
 export const metadata: Metadata = {
   title: '2012 Chevrolet Express 3500 for Sale',
-  description: 'Private-party listing for a 2012 Chevrolet Express 3500. View details, condition, maintenance history, and photos.',
+  description: 'A 12-passenger 2012 Chevrolet Express 3500 for sale in Cumming, Georgia. A practical full-size van for larger families, carpools, and road trips.',
   openGraph: {
     title: '2012 Chevrolet Express 3500 for Sale',
-    description: 'Private-party listing with vehicle details, condition, maintenance history, and photos.',
+    description: 'A 12-passenger Chevrolet Express for larger families, carpools, and road trips. Listed for $12,000 in Cumming, Georgia.',
     type: 'website',
     ...(socialImage ? { images: [{ url: socialImage, width: 1200, height: 630 }] } : {}),
   },
   twitter: {
     card: 'summary_large_image',
     title: '2012 Chevrolet Express 3500 for Sale',
-    description: 'Private-party listing with vehicle details, condition, maintenance history, and photos.',
+    description: 'A 12-passenger Chevrolet Express for larger families, carpools, and road trips. Listed for $12,000 in Cumming, Georgia.',
     ...(socialImage ? { images: [socialImage] } : {}),
   },
 };

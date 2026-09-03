@@ -6,8 +6,7 @@ import {
   Gauge,
   MapPin,
   MessageCircle,
-  ShieldCheck,
-  Wrench,
+  UsersRound,
 } from 'lucide-react';
 
 import { PhotoGallery } from '@/components/photo-gallery';
@@ -17,7 +16,7 @@ const overview = [
   { label: 'Year', value: vehicle.year, icon: CalendarDays },
   { label: 'Mileage', value: vehicle.mileage, icon: Gauge },
   { label: 'Location', value: vehicle.location, icon: MapPin },
-  { label: 'Condition', value: vehicle.condition, icon: ShieldCheck },
+  { label: 'Seating', value: vehicle.seating, icon: UsersRound },
 ];
 
 export default function Home() {
@@ -82,7 +81,7 @@ export default function Home() {
       <section className="content-section intro-section" id="details">
         <div className="section-heading">
           <p className="eyebrow">The van</p>
-          <h2>Built to work. Ready for what’s next.</h2>
+          <h2>Room for everyone. Ready for the next trip.</h2>
         </div>
         <div className="intro-copy">
           {vehicle.description.map((paragraph) => (
@@ -94,13 +93,13 @@ export default function Home() {
       <section className="detail-grid content-section">
         <article className="detail-card featured-card">
           <div className="card-icon">
-            <Wrench aria-hidden="true" />
+            <UsersRound aria-hidden="true" />
           </div>
-          <p className="eyebrow">Maintenance</p>
-          <h2>Cared for, with records to show it.</h2>
-          <p>{vehicle.maintenanceIntro}</p>
+          <p className="eyebrow">Made for families</p>
+          <h2>One van. The whole crew.</h2>
+          <p>{vehicle.highlightIntro}</p>
           <ul className="check-list">
-            {vehicle.maintenance.map((item) => (
+            {vehicle.highlights.map((item) => (
               <li key={item}>
                 <Check aria-hidden="true" /> {item}
               </li>
@@ -128,7 +127,7 @@ export default function Home() {
             <p className="eyebrow">Take a closer look</p>
             <h2>Photos of the van</h2>
           </div>
-          <p>Exterior, interior, cargo area, and the details that matter.</p>
+          <p>Exterior, interior, passenger seating, and the details that matter.</p>
         </div>
         <PhotoGallery variant="grid" />
       </section>
@@ -153,8 +152,8 @@ export default function Home() {
         <div className="contact-inner">
           <div>
             <p className="eyebrow">Interested?</p>
-            <h2>Let’s talk about the van.</h2>
-            <p>Reach out with questions or to arrange a time to see it in person.</p>
+            <h2>See if it fits your family.</h2>
+            <p>Reach out with questions or to arrange a time to see it in Cumming.</p>
           </div>
           <div className="contact-actions">
             <a className="primary-button light-button" href={vehicle.contactHref}>
